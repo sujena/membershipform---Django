@@ -1,0 +1,15 @@
+{% load crispy_forms_tags %}
+{% block content %}
+<div>
+    <form method="POST">
+        {% csrf_token %}
+        <fieldset>
+            <legend>Log In Page</legend>
+        {{ form|crispy}}
+            </fieldset>
+            <div>
+                <button>Log In </button>
+            </div>
+        </form>
+    </div>
+{% endblock content %}
